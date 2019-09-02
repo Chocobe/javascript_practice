@@ -1,7 +1,6 @@
 {
   "name": "chapter_2_set_invironment",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +20,6 @@
     "eslint-config-google": "^0.13.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0-beta.2"
-  }
+  },
+  "description": ""
 }
