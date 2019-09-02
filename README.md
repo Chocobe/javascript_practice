@@ -118,6 +118,24 @@
 
 1. npm으로 페키지 생성 - 프로젝트 루트에서 실행할 것 (npm init)
 
+1. underscore를 로컬 패키지로 추가
+
+1. gulp와 babel을 로컬 패키지로 추가
+
+    1. npm install --save-dev **gulp**
+
+    1. npm install --save-dev **@babel/core**
+
+    1. npm install --save-dev **@babel/preset-env**
+
+    1. npm install --save-dev **gulp-babel@next**
+
+        * ``.babelrc`` 파일을 생성하여, ``{ "presets" : [@babel/preset-env"] }`` 작성하기
+
+    1. 노드 소스용 서브디렉터리 만들기 (디렉터리 : es6)
+
+    1. 브라우저 소스용 서브디렉터리 만들기 (디렉터리 : public/es6)
+
 1. ``gulpfile.js`` 파일 생성
 
     ```javascript
@@ -136,24 +154,7 @@
         callback();
     });
     ```
-
-1. gulp와 babel을 로컬 패키지로 추가
-
-    1. npm install --save-dev **gulp**
-
-    1. npm install --save-dev **@babel/core**
-
-    1. npm install --save-dev **gulp-babel@next**
-
-    1. npm install --save-dev **@babel/preset-env**
-
-        * ``.babelrc`` 파일을 생성하여, ``{ "presets" : [@babel/preset-env"] }`` 작성하기
-
-    1. 노드 소스용 서브디렉터리 만들기 (디렉터리 : es6)
-
-    1. 브라우저 소스용 서브디렉터리 만들기 (디렉터리 : public/es6)
-
-
+    
 1. 작성한 코드 실행은 아래의 순서로 한다.
 
     1. ``gulp``
