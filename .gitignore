@@ -14,5 +14,5 @@ node_modules
 *~
 
 #es5버전 파일은 버전관리 제외
-chapter_2_set_invironment/dist
-chapter_2_set_invironment/public/dist
+dist
+public/dist

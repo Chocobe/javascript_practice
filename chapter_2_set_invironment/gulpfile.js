@@ -9,6 +9,7 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 
 gulp.task('default', function(callback) {
+    
     // 노드 소스
     gulp.src("es6/**/*.js").pipe(babel()).pipe(gulp.dest("dist"));
 
