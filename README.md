@@ -106,7 +106,7 @@
                 });
             ```
 
-:camel:[Top](#javascript-es6)
+:camel:[[Top]](#javascript-es6)
 
 ---
 
@@ -160,4 +160,4 @@
 
     1. ``node dist/파일명.js``
 
-:camel:[Top](#javascript-es6)
+:camel:[[Top]](#javascript-es6)
