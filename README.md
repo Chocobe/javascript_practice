@@ -49,4 +49,11 @@
 
     1. 브라우저 소스용 서브디렉터리 만들기 (디렉터리 : public/es6)
 
+
+1. 작성한 코드 실행은 아래의 순서로 한다.
+
+    1. ``gulp``
+
+    1. ``node dist/파일명.js``
+
 :camel:[Top](#javascript-es6)
