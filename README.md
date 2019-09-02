@@ -35,13 +35,13 @@
 
 1. gulp와 babel을 로컬 패키지로 추가
 
-    1. npm install --save-dev gulp
+    1. npm install --save-dev **gulp**
 
-    1. npm install --save-dev @babel/core
+    1. npm install --save-dev **@babel/core**
 
-    1. npm install --save-dev gulp-babel@next
+    1. npm install --save-dev **gulp-babel@next**
 
-    1. npm install --save-dev @babel/preset-env
+    1. npm install --save-dev **@babel/preset-env**
 
         * ``.babelrc`` 파일을 생성하여, ``{ "presets" : [@babel/preset-env"] }`` 작성하기
 
