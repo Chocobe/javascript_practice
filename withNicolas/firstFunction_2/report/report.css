@@ -1,0 +1,8 @@
+#container {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: peru;
+    border:2px solid black;
+    text-align: center;
+}
