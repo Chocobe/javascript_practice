@@ -1,0 +1,11 @@
+body {
+    width: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+    text-align: center;
+    background-color: peru;
+}
+
+#title {
+    color: #34495e;
+}
