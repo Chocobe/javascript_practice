@@ -1,0 +1,34 @@
+header,
+section {
+    width: 77%;
+    border: 2px solid black;
+    background-color: peru;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.clicked_step_1 {
+    color: blue;
+    transition: color 0.5s ease-in-out;
+}
+
+.clicked_step_2 {
+    color: red;
+    transition: color 0.5s ease-in-out;
+}
+
+input {
+    text-align: center;
+}
+
+.inputContainer {
+    display: none;
+}
+
+.greeting {
+    display: none;
+}
+
+.showing {
+    display: block;
+}

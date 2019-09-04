@@ -1,0 +1,20 @@
+body {
+    width: 77%;
+    height:333px;
+    margin: 0 auto;
+}
+
+.js-clockContainer {
+    background-color: peru;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
