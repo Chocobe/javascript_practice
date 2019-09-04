@@ -1,0 +1,21 @@
+body {
+    width: 70%;
+    height: 300px;
+    border: 2px solid black;
+    background-color: peru;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #130f40;
+}
+
+.clicked {
+    color: #eb4d4b;
+    transition: color 0.5s ease-in-out;
+}
+
+.button {
+    cursor: pointer;
+}
