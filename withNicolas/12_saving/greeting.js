@@ -4,7 +4,7 @@ const form = document.querySelector(".js-form"),
 const greeting = document.querySelector(".js-greetings");
 
 const SHOWING_CN = "showing";
-const USER_LS = "currentUser";
+const USER_LS = "chocobe";
 
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
