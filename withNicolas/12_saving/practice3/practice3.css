@@ -1,0 +1,30 @@
+#container {
+    width: 77%;
+    margin: 0 auto;
+    background-color: peru;
+    border: 2px solid black;
+}
+
+input {
+    text-align: center;
+}
+
+.clickedStep_1 {
+    color: #eb3b5a;
+    transition: color 0.5s ease-in-out;
+}
+
+.js-clockContainer,
+.clickedStep_2 {
+    color: #2d98da;
+    transition: color 0.5s ease-in-out;
+}
+
+.from,
+.greeting {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
