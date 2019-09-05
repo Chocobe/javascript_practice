@@ -1,0 +1,12 @@
+input {
+    text-align: center;
+}
+
+.form,
+.greeting {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
