@@ -1,0 +1,1 @@
+window.alert("잘못 입력함");
