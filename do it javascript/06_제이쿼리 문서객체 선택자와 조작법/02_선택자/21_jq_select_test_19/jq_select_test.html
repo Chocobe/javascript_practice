@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq select test 19</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $("li:first-of-type").css({
+                    "background-color" : "peru"
+                });
+
+                $("li:last-of-type").css({
+                    "background-color" : "gray"
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>탐색 선택자</h1>
+        
+        <ul>
+            <li>내용1-1</li>
+            <li>내용1-2</li>
+            <li>내용1-3</li>
+        </ul>
+
+        <ul>
+            <li>내용2-1</li>
+            <li>내용2-2</li>
+            <li>내용2-3</li>
+        </ul>
+        
+    </body>
+</html>
