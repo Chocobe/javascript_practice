@@ -1,0 +1,18 @@
+(function() {
+    var num = 100;
+
+    function menu() {
+        num += 100;
+        alert(num);
+    }
+    menu();
+}());
+
+(function() {
+    var num = 100;
+
+    function menu() {
+        alert(num);
+    }
+    menu();
+}());
