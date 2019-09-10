@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq Select Test 13</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                var style = {
+                    "background-color" : "peru",
+                    "border" : "2px solid black"
+                }
+
+                $(".txt3").prevUntil(".title").css(style);
+                $(".txt3").nextUntil(".txt6").css(style);
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <h1 class="title">선택자</h1>
+            <p>내용1</p>
+            <p>내용2</p>
+            <p class="txt3">내용3</p>
+            <p>내용4</p>
+            <p>내용5</p>
+            <p class="txt6">내용6</p>
+        </div>
+    </body>
+</html>
