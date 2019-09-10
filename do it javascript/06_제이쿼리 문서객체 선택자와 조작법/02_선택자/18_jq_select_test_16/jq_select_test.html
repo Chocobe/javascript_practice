@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq select test 15</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $("#menu li:first").css({
+                    "background-color" : "peru"
+                });
+
+                $("#menu li:last").css({
+                    "background-color" : "orange"
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>탐색 선택자</h1>
+        <ul id="menu">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+        </ul>
+    </body>
+</html>
