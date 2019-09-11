@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq control test</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #wrap {
+                height: 5000px;
+                padding-top: 2000px;
+            }
+        </style>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                var topNum = $("h1").offset().top;
+                $(window).scrollTop(topNum);
+
+                var scrollTop = $(window).scrollTop();
+                console.log(scrollTop);
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <h1>위치 메서드</h1>
+        </div>
+    </body>
+</html>

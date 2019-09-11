@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #box-wrapper {
+                width: 400px;
+                height: 400px;
+                margin: 100px auto 0;
+                position: relative;
+                background-color: peru;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: 150px;
+                top: 150px;
+                background-color: aqua;
+            }
+        </style>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                var txt_1 = $(".txt_1 span");
+                var txt_2 = $(".txt_2 span");
+
+                var offsetTop = $(".box").offset().top;
+                var positionTop = $(".box").position().top;
+
+                txt_1.text(offsetTop);
+                txt_2.text(positionTop);
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="box-wrapper">
+            <p class="box">Box</p>
+        </div>
+
+        <p class="txt_1">절대 위치값(Top) : <span></span></p>
+        <p class="txt_2">상대 위치값(Top) : <span></span></p>
+    </body>
+</html>
