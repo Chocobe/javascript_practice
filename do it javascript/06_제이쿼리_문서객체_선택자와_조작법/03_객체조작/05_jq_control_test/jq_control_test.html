@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq control test</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                var result_1 = $("#check1").prop("checked");
+                console.log(result_1);
+
+                var result_2 = $("#check2").prop("checked");
+                console.log(result_2);
+
+                $("#check3").prop("checked", true);
+                var result_3 = $("#check3").prop("checked");
+                console.log(result_3);
+
+                var result_4 = $("#se_1").prop("selectedIndex");
+                console.log(result_4);
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1><strong>객체 조작 및 생성</strong></h1>
+        <form action="#" id="form_1">
+            <p>
+                <label for="check1">check1</label>
+                <input type="checkbox" name="check1" id="check1">
+                
+                <label for="check2">check2</label>
+                <input type="checkbox" name="check2" id="check2" checked>
+
+                <label for="check3">check3</label>
+                <input type="checkbox" name="check3" id="check3">
+            </p>
+
+            <p>
+                <select name="se_1" id="se_1">
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                    <option value="option3" selected>option3</option>
+                </select>
+            </p>
+        </form>
+    </body>
+</html>
