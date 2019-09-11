@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq control test</title>
+
+        <style>
+            div {
+                background-color: peru;
+            }
+        </style>
+        
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $("strong").unwrap();
+                $(".class_1").wrap("<div>");
+                $(".class_2").wrapAll("<div>");
+                $("ul").wrapInner("<h3>");
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1 id="title_1">
+            <strong>객체 조작 및 생성</strong>
+        </h1>
+        <p class="class_1">내용1</p>
+        <p class="class_1">내용2</p>
+        <p class="class_2">내용3</p>
+        <p class="class_2">내용4</p>
+
+        <ul>
+            <li>내용5</li>
+            <li>내용6</li>
+        </ul>
+    </body>
+</html>
