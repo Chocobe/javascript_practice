@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq control test</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $("#listZone").append("<li>append</li>");
+                $("<li>appendTo</li>").appendTo("#listZone");
+
+                $("#listZone").prepend("<li>prepend</li>");
+                $("<li>prependTo</li>").prependTo("#listZone");
+            });
+        </script>
+    </head>
+
+    <body>
+        <ul id="listZone">
+            <li>리스트</li>
+        </ul>
+    </body>
+</html>
