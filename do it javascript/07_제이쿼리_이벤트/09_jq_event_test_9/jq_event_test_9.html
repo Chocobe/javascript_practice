@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq event test 9</title>
+
+        <style>
+            body {
+                width: 5000px;
+                height: 10000px;
+            }
+
+            #wrap {
+                position: fixed;
+                left: 10px;
+                top: 10px;
+            }
+        </style>
+        
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(window).on("scroll", function() {
+                var sc_top = $(window).scrollTop();
+                var sc_left = $(this).scrollLeft();
+
+                $(".top").text(sc_top);
+                $(".left").text(sc_left);
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <p>Scroll Top : <span class="top">0</span> px</p>
+            <p>Scroll Left : <span class="left">0</span> px</p>
+        </div>
+    </body>
+</html>
