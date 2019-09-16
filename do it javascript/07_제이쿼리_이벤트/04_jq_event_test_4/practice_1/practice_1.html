@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice 1</title>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $(window).ready(function() {
+                    var height = $(".myImg").height();
+                    console.log(`ready height : ${height}`);
+                });
+
+                $(window).on({"load" : function() {
+                        var height = $(".myImg").height();
+                        console.log(`load height : ${height}`);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <p>
+            <img src="http://place-hold.it/330x330" class="myImg">
+        </p>
+    </body>
+</html>
