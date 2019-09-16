@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq event test 13</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $(document).on({
+                    "keydown" : keyEventFunc
+                });
+            });
+
+            function keyEventFunc(e) {
+                var key = "";
+
+                switch(e.keyCode) {
+                case 37:
+                    key = "LEFT";
+                    break;
+
+                case 38:
+                    key = "TOP";
+                    break;
+
+                case 39:
+                    key = "RIGHT";
+                    break;
+
+                case 40:
+                    key = "DOWN";
+                    break;
+                }
+
+                if(key) {
+                    $("#user_id").val(key);
+                }
+            };
+        </script>
+    </head>
+
+    <body>
+        <p>
+            <input type="text" name="user_id" id="user_id">
+        </p>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice 1</title>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $(document).on(
+                    "keydown", keyFunc
+                );
+            });
+
+            function keyFunc(e) {
+                var key = "";
+
+                switch(e.keyCode) {
+                case 37:
+                    key = "LEFT";
+                    break;
+
+                case 38:
+                    key = "TOP";
+                    break;
+
+                case 39:
+                    key = "RIGHT";
+                    break;
+
+                case 40:
+                    key = "DOWN";
+                    break;
+                }
+
+                if(key) {
+                    $("#input_val").val(key);
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <label for="input_val">입력값 </label>
+        <input type="text" id="input_val" name="input_val">
+    </body>
+</html>
