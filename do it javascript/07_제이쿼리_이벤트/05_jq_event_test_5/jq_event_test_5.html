@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq event test 5</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $(".button_1").on("click", function(e) {
+                    e.preventDefault();
+                    $(".text_1").css("color", "#ff0");
+                });
+
+                $(".button_2").on("dblclick", function(e) {
+                    $(".text_2").css("color", "#0ff");
+                });
+
+                $(".button_3").on("dblclick", function() {
+                    $(".text_3").css("background-color", "#0f0");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <p>
+            <a href="http://easyspub.co.kr" class="button_1">버튼_1</a>
+        </p>
+        <p class="text_1">내용_1</p>
+        
+        <p>
+            <a href="http://easyspub.co.kr" class="button_2">버튼_2</a>
+        </p>
+        <p class="text_2">내용_2</p>
+
+        <p>
+            <a href="http://easyspub.co.kr" class="button_3">버튼_3</a>
+        </p>
+        <p class="text_3">내용_3</p>
+    </body>
+</html>
