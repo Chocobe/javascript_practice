@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice 2</title>
+
+        <style>
+            body {
+                width: 5000px;
+                height: 5000px;
+            }
+
+            #wrap {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+            }
+        </style>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $(this).on(
+                    "scroll", function() {
+                        var positionTop = $(this).scrollTop();
+                        var positionLeft = $(this).scrollLeft();
+                        
+                        $("#wrap .top span").text(positionTop);
+                        $("#wrap .left span").text(positionLeft);
+                    }
+                );
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <p class="top">Top : <span>0</span> px</p>
+            <p class="left">Left: <span>0</span> px</p>
+        </div>
+    </body>
+</html>
