@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq event test 14</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $(".menuWrap_1 a").on("click", function(e) {
+                    e.preventDefault();
+
+                    $(".menuWrap_1 a").css({
+                        "background" : "#fff"
+                    });
+
+                    $(this).css({
+                        "background" : "#ff0"
+                    });
+                });
+
+                $(".menuWrap_2 a").on("click", function(e) {
+                    e.preventDefault();
+
+                    $(".menuWrap_2 a").css({
+                        "background" : "magenta"
+                    })
+
+                    var idx = $(".menuWrap_2 a").index(this);
+                    $(".menuWrap_2 a").eq(idx).css({
+                        "background" : "cyan"
+                    });
+
+                    $(".indexNum").text(idx);
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h2>$(this)</h2>
+        <ul class="menuWrap_1">
+            <li><a href="#">메뉴_1</a></li>
+            <li><a class="test" href="#">메뉴_2</a></li>
+            <li><a href="#">메뉴_3</a></li>
+        </ul>
+
+        <h2>index()</h2>
+        <ul class="menuWrap_2">
+            <li><a href="#">메뉴_4</a></li>
+            <li><a href="#">메뉴_5</a></li>
+            <li><a href="#">메뉴_6</a></li>
+        </ul>
+
+        <p class="indexNum"></p>
+    </body>
+</html>

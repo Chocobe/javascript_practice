@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice 1</title>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $("#menuWrap a").on({
+                    "click" : function(e) {
+                        e.preventDefault();
+
+                        $("#menuWrap a").css("background", "yellow");
+
+                        var idx = $("#menuWrap a").index(this);
+                        $("#menuWrap a").eq(idx).css("background", "magenta");
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>index 테스트</h1>
+        <div id="menuWrap">
+            <p><a href="#">메뉴_1</a></p>
+            <p><a href="#">메뉴_2</a></p>
+            <p><a href="#">메뉴_3</a></p>
+        </div>
+    </body>
+</html>
