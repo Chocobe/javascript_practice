@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq event test 11</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $("#button_1").data({"text" : "javascript"}).on({
+                    "mouseover" : overFunc,
+                    "mouseout" : outFunc
+                });
+
+                $("#button_2").data({"text" : "Welcome"}).on({
+                    "mouseover focus" : overFunc,
+                    "mouseout blur" : outFunc
+                });
+            });
+
+            function overFunc() {
+                $(".txt").text($(this).data("text"));
+            };
+
+            function outFunc() {
+                $(".txt").text("");
+            }
+        </script>
+    </head>
+
+    <body>
+        <p><button id="button_1">버튼_1</button></p>
+        <p><button id="button_2">버튼_2</button></p>
+        <p class="txt"></p>
+    </body>
+</html>
