@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq event test 7</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $(".box_1").on({
+                    "mouseout" : function() {
+                        $(".box_1").css("background", "white");
+                    },
+                    
+                    "mouseover" : function() {
+                        $(".box_1").css("background", "peru");
+                    }
+                });
+
+                $(".box_2").on({
+                    "mouseleave" : function() {
+                        $(".box_2").css("background", "magenta");
+                    },
+
+                    "mouseenter" : function() {
+                        $(".box_2").css("background", "white");
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>Mouse Over / Mouse Out</h1>
+        <div class="box_1">
+            <p><a href="#">내용_1</a></p>
+            <p><a href="#">내용_2</a></p>
+            <p><a href="#">내용_3</a></p>
+        </div>
+
+        <h1>Mouse Enter / Mouse Leave</h1>
+        <div class="box_2">
+            <p><a href="#">내용_4</a></p>
+            <p><a href="#">내용_5</a></p>
+            <p><a href="#">내용_6</a></p>
+        </div>
+    </body>
+</html>
