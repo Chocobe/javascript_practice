@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>연습문제 1</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                var beforeMenu = null;
+
+                $(".gnb > button > a").on("mouseover focus", function() {
+                    if(beforeMenu) {
+                        beforeMenu.css("background", "none");
+                    }
+                    $(this).css("background", "#0ff");
+                });
+
+                $(".gnb a").on("mouseout blur", function() {
+                    $(".gnb a").css("background", "none");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <ul class="gnb">
+            <button><a href="#">menu 1</a></button>
+            <button><a href="#">menu 2</a></button>
+            <button><a href="#">menu 3</a></button>
+            <button><a href="#">menu 4</a></button>
+        </ul>
+    </body>
+</html>
