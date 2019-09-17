@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq effect 연습문제 2</title>
+
+        <style>
+            .box {
+                width: 50px;
+                background: peru;
+                text-align: center;
+            }
+        </style>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            const BACK = "back";
+            const GO = "go";
+            const MIN_POSITION = 0;
+            const MAX_POSITION = 4;
+            const DEGREE = 100;
+            var count = MIN_POSITION;
+
+            $(function() {    
+                $(".buttonsWrap button").on("click", function() {
+                    buttonsFunction(this);
+                });
+            });
+
+            function buttonsFunction(target) {
+                if(!$(".box").is(":animated")) {
+                    if($(target).hasClass(BACK)) {
+                        if(count <= MIN_POSITION) {
+                            return;
+                        }
+                        console.log("test_1");
+                        count--;
+
+                    } else {
+                        if(count >= MAX_POSITION) {
+                            return;
+                        }
+                        console.log("test_2");
+                        count++;
+                    }
+
+                    $(".box").animate({marginLeft:`${DEGREE * count}px`}, 500, "swing");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="buttonsWrap">
+            <button class="back">Back</button>
+            <button class="go">Go</button>
+        </div>
+
+        <p class="box">박스</p>
+    </body>
+</html>
