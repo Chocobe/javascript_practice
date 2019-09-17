@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq effect test 1</title>
+
+        <style>
+            p {
+                width: 110px;
+                text-align: center;
+            }
+
+            .txt_1 {
+                background: pink;
+            }
+
+            .txt_2 {
+                background: aqua;
+            }
+
+            .txt_3 {
+                background: orange;
+            }
+
+            .txt_4 {
+                background: green;
+            }
+
+            .txt_5 {
+                background: gold;
+            }
+        </style>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(".txt_1").animate({marginLeft:"300px"}, 1000);
+
+                $(".txt_2").delay(3000).animate({marginLeft:"300px"}, 1000);
+
+                $(".button_1").on("click", moveElement);
+            });
+
+            function moveElement() {
+                $(".txt_3").animate({marginLeft:"+=50px"}, 800);
+
+                $(".txt_4").animate({marginLeft:"+=50px"}, 800);
+                $(".txt_4").stop();
+
+                $(".txt_5").animate({marginLeft:"+=50px"}, 800);
+                $(".txt_5").stop(true, true);
+            }
+        </script>
+    </head>
+
+    <body>
+        <p class="txt_1">효과 1</p>
+        <p class="txt_2">효과 2<br>delay(3000)</p>
+        <p><button class="button_1">50px 전진</button></p>
+        <p class="txt_3">효과 3</p>
+        <p class="txt_4">효과 4<br>stop()</p>
+        <p class="txt_5">효과 5<br>stop(true, true)</p>
+    </body>        
+</html>
