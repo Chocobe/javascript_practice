@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq effect test 1</title>
+
+        <style>
+            body {
+                width: 500px;
+                margin: 0 auto;
+            }
+            
+            .content {
+                width: 400px;
+                background-color: #eee;
+            }
+        </style>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(".button_2").hide();
+                
+                $(".button_1").on("click", function() {
+                    $(".box").slideUp(1000, "linear", function() {
+                        $(".button_1").hide();
+                        $(".button_2").show();
+                    });
+                });
+
+                $(".button_2").on("click", function() {
+                    $(".box").slideDown(1000, "linear", function() {
+                        $(".button_1").show();
+                        $(".button_2").hide();
+                    });
+                });
+
+
+                $(".button_3").on("click", function() {
+                    $(".box").slideToggle(1000, "linear");
+                });
+
+
+                $(".button_4").on("click", function() {
+                    $(".box").fadeTo("fast", 0.3);
+                });
+
+                $(".button_5").on("click", function() {
+                    $(".box").fadeTo("fast", 1);
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <p>
+            <button class="button_1">Slide Up</button>
+            <button class="button_2">Fade In</button>
+        </p>
+
+        <p>
+            <button class="button_3">Toggle Slide</button>
+        </p>
+
+        <p>
+            <button class="button_4">FadeTo(0.3)</button>
+            <button class="button_5">FadeTo(1)</button>
+        </p>
+
+        <div class="box">
+            <div class="content">
+                    감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 
+                    명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다. 
+                    대한민국은 민주공화국이다. 법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권은 법률이 정하는 바에 의하여 
+                    이를 제한하거나 인정하지 아니할 수 있다. 선거와 국민투표의 공정한 관리 및 정당에 관한 사무를 처리하기 위하여 선거관리위원회를 
+                    둔다. 정당은 법률이 정하는 바에 의하여 국가의 보호를 받으며, 국가는 법률이 정하는 바에 의하여 정당운영에 필요한 자금을 
+                    보조할 수 있다.
+            </div>
+        </div>
+    </body>
+</html>
