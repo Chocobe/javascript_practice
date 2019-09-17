@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice 2</title>
+
+        <style>
+            body {
+                width: 800px;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            span {
+                background: peru;
+                color: white;
+            }
+        </style>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(".button_1").on("click", function() {
+                    $(".txt_1").animate({marginLeft:"500px", fontSize:"25px"}, 1000, "swing", function() {
+                        alert("모션 완료!");
+                    });
+                });
+
+                $(".button_2").on("click", function() {
+                    $(".txt_2").animate({marginLeft:"+=50px"}, 1000, "swing");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <p><button class="button_1">버튼 1</button></p>
+        <span class="txt_1">"500px" 이동</span>
+
+        <p><button class="button_2">버튼 2</button></p>
+        <span class="txt_2">"50px" 이동</span>
+    </body>
+</html>
