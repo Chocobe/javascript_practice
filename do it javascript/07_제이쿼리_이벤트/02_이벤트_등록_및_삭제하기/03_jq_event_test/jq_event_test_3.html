@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jq event test 3</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(".button_1").on("mouseover focus", function() {
+                    alert("Hello javascript");
+                });
+
+                $(document).on("mouseover focus", ".button_2", function() {
+                    alert("Welcome");
+                });
+
+                var button_2 = $(`<p><button class="button_2">버튼_2</button></p>`);
+                $("#wrap").append(button_2);
+
+                $(".delete_1").on("click", function() {
+                    $(".button_1").off("mouseover focus");
+                });
+
+                $(".delete_2").on("click", function() {
+                    $(document).off("mouseover focus");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <p>
+                <button class="button_1">버튼_1</button>
+            </p>
+        </div>
+
+        <p>
+            <button class="delete_1">버튼_1 이벤트 해제</button>
+            <button class="delete_2">버튼_2 이벤트 해제</button>
+        </p>
+        
+    </body>
+</html>
