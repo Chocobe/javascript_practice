@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jquery effect 총정리</title>
+
+        <style>
+            .txt {
+                width: 50px;
+                background: peru;
+                text-align: center;
+            }
+        </style>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            const DEGREE = 50;
+            const LIMIT_POSITION = 10;
+            var position = 0;
+
+            const BACK = "back";
+            const GO = "go";
+            
+            $(function() {
+                $(".buttons button").on("click", function() {
+                    if($(this).hasClass(BACK)) {
+                        if(position <= 0) {
+                            return;
+                        }
+                        position--;
+
+                    } else {
+                        if(position >= LIMIT_POSITION) {
+                            return;
+                        }
+                        position++;
+                    }
+
+                    $(".txt").animate({marginLeft:`${position * DEGREE}px`}, 700, "swing");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="buttons">
+            <button class="back">Back</button>
+            <button class="go">Go</button>
+        </div>
+        <p class="txt">내용</p>
+    </body>
+</html>
