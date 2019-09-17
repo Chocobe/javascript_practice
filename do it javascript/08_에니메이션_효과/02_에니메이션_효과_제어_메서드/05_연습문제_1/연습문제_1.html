@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>연습문제 1</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(".fade").on("click", function() {
+                    $(".txt").fadeToggle(1000);
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <button class="fade">Fade Button</button>
+
+        <p class="txt">내용 1</p>
+    </body>
+</html>
