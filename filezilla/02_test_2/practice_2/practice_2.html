@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice 2</title>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $.ajax({
+                    url:"MOCK_DATA.json",
+                    dataType:"json",
+                    success:function(data) {
+                        var table = $(`<table border="1" />`);
+
+                        for(var i in data) {
+                            const id = data[i].id;
+                            const first_name = data[i].first_name;
+                            const last_name = data[i].last_name;
+                            const email = data[i].email;
+                            const gender = data[i].gender;
+                            const ip_address = data[i].ip_address;
+
+                            var row = $(`<tr />`).append(
+                                    $(`<td />`).text(id),
+                                    $(`<td />`).text(first_name),
+                                    $(`<td />`).text(last_name),
+                                    $(`<td />`).text(email),
+                                    $(`<td />`).text(gender),
+                                    $(`<td />`).text(ip_address)
+                            );
+
+                            table.append(row);
+                        }
+
+                        $(".content").append(table);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>AJAX로 JSON 바인딩 하기</h1>
+        <div class="content"></div>
+    </body>
+</html>

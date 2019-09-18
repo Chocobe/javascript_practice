@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jquery ajax 1 test</title>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function() {
+                $("#newsWrap_1").load("jquery_ajax_news.html #news_1");
+                console.log($("#newsWrap_1"));
+                $("#newsWrap_2").load("jquery_ajax_news.html #news_2");
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>LOAD 1</h1>
+        <div id="newsWrap_1"></div>
+
+        <h1>LOAD 2</h1>
+        <div id="newsWrap_2"></div>
+    </body>
+</html>

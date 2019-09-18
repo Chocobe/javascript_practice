@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice 2</title>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $.ajax({
+                    url:"MOCK_DATA.json",
+                    dataType:"json",
+                    success:function(data) {
+                        if(data.length > 0) {
+                            var table = $(`<table border="1" />`);
+                            
+                            for(var i in data) {
+                                const id = data[i].id;
+                                const first_name = data[i].first_name;
+                                const last_name = data[i].last_name;
+                                const email = data[i].email;
+                                const gender = data[i].gender;
+                                const addr = data[i].addr;
+
+                                var resultData = $("<tr />").append(
+                                                $("<td />").text(id),
+                                                $("<td />").text(first_name),
+                                                $("<td />").text(last_name),
+                                                $("<td />").text(email),
+                                                $("<td />").text(gender),
+                                                $("<td />").text(addr)
+                                );
+
+                                table.append(resultData);
+                            }
+
+                            $(".content").append(table);
+                        }
+                    }
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="content"></div>
+    </body>
+</html>
