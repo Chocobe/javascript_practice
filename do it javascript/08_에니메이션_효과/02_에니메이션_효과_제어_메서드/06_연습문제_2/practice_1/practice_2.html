@@ -1,0 +1,67 @@
+<!-- Back, Go 버튼에 따라 대상 요소 이동 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice 2</title>
+
+        <style>
+            div.buttonsWrap {
+                margin: 25px;
+            }
+
+            div.box {
+                width: 250px;;
+                height: 250px;
+
+                background: magenta;
+                border: 1px solid black;
+            }
+        </style>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                const BACK = "back";
+                const GO = "go";
+                const MIN_POSITION = 0;
+                const MAX_POSITION = 200;
+                const DEGREE = 100;
+                let currentPosition = MIN_POSITION;
+
+                $(".buttonsWrap button").on("click", function() {
+                    if($(".box").is(":animated")) {
+                        return;
+                    }
+                    
+                    if($(this).hasClass(BACK)) {
+                        if(currentPosition <= MIN_POSITION) {
+                            return;
+                        }
+                        currentPosition -= DEGREE;
+
+                    } else {
+                        if(currentPosition >= MAX_POSITION) {
+                            return;
+                        }
+
+                        currentPosition += DEGREE;
+                    }
+
+                    $(".box").animate({marginLeft:`${currentPosition}px`}, 500, "swing");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>animate() 테스트</h1>
+        
+        <div class="buttonsWrap">
+            <button class="back">Back</button>
+            <button class="go">Go</button>
+        </div>
+
+        <div class="box"></div>
+    </body>
+</html>

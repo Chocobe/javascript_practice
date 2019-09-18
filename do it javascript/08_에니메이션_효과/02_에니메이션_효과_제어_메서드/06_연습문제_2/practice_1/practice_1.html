@@ -1,0 +1,26 @@
+<!-- 투명도 테스트 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>practice 1</title>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(document).on("click", ".fadeButton", fadeEvent);
+                // $(".fadeButton").on("click", fadeEvent);
+            });
+
+            function fadeEvent() {
+                $(".content").fadeToggle(500, "swing");
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>투명도 테스트</h1>
+        <button class="fadeButton">Fade Toggle Button</button>
+        <p class="content">내용</p>
+    </body>
+</html>
