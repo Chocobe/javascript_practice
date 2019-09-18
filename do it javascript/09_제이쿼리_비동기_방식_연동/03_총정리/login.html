@@ -5,6 +5,76 @@
         <title>Login</title>
 
         <link rel="stylesheet" href="login.css">
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                init();
+
+                var test;
+                
+                $(".confirm").on("click", function() {
+                    $.ajax({
+                        url:"js/MOCK_DATA.json",
+                        dataType:"json",
+                        success:function(database) {
+                            test = database;
+
+                            var inputID = $(".id input").val();
+                            var inputPassword = $(".password input").val();
+                            
+                            const isValidUser = authentication(database, inputID, inputPassword);
+
+                            if(isValidUser) {
+                                greeting(inputID);
+                                $(".loginWrap").hide();
+                                $(".confirmedWrap").show();
+
+                            } else {
+                                alert("로그인 실패");
+                            }
+                        }
+                    });
+                });
+            });
+
+            function init() {
+                $(".loginWrap").show();
+                $(".confirmedWrap").hide();
+            }
+
+            function confirmLogin(isValidUser) {
+                if(isValidUser) {
+
+                }
+            };
+
+            function loadDB() {
+                
+            };
+
+            function authentication(database, inputID, inputPassword) {
+                for(var i in database) {
+                    if(database[i].id == inputID) {
+                        const dbID = database[i].id;
+                        const dbPassword = database[i].password;
+
+                        if(dbPassword == inputPassword) {
+                            return true;
+
+                        } else {
+                            return false;
+                        }
+                    }
+                }
+
+                return false;
+            };
+
+            function greeting(userID) {
+                $(".greeting").text(`반갑습니다 ${userID} 님`);
+            }
+        </script>
     </head>
 
     <body>
@@ -14,16 +84,20 @@
             <div class="authen">
                 <div class="id">
                     <p class="userId">아이디</p>
-                    <input type="text" id="userId" name="userId">
+                    <input type="text" id="userId" name="userId" placeholder="ID를 입력하세요">
                 </div>
 
                 <div class="password">
                     <p class="userPassword">비밀번호</p>
-                    <input type="text" id="userPassword" name="userPassword">
+                    <input type="password" id="userPassword" name="userPassword" placeholder="Password를 입력하세요">
                 </div>
             </div>
 
             <button class="confirm">로그인</button>
-        </div>        
+        </div>
+
+        <div class="confirmedWrap">
+            <h3 class="greeting">Wellcom</h3>
+        </div>
     </body>
 </html>

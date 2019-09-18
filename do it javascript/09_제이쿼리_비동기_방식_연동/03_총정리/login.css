@@ -3,7 +3,8 @@
     padding: 0;
 }
 
-.loginWrap {
+.loginWrap,
+.confirmedWrap {
     width: 450px;
     height: 170px;
     border: 3px solid black;
@@ -16,6 +17,10 @@
 h3 {
     margin: 25px 0 0 50px;
     position: relative;
+}
+
+.greeting {
+    margin: 75px 0 0 50px;
 }
 
 .authen {
@@ -40,3 +45,4 @@ h3 {
 
     margin: 25px;
 }
+
