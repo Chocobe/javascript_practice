@@ -3,7 +3,7 @@ const from = document.querySelector(".js-from"),
 
 const greeting = document.querySelector(".js-greeting");
 
-const USER = "chocobe";
+const USER = "currentUser";
     
 const SHOWING_CLASS = "showing";
 

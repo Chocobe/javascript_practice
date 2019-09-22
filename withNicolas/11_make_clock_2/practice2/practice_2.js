@@ -1,5 +1,4 @@
-const clockWrap = document.querySelector(".clockWrap"),
-    clock = clockWrap.querySelector(".js-clock");
+const clock = document.querySelector(".js-clock");
 
 function init() {
     getTime();

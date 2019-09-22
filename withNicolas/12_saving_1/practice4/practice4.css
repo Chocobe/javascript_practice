@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+
+    background: lightgray;
+}
+
+.clockWrap {
+    margin: 25px;
+}
+
+.greeting,
+.form {
+    display: none;
+}
+
+.showing {
+    display: block;
+}

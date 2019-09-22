@@ -1,27 +1,22 @@
-const form = document.querySelector(".js-form"),
-    input = form.querySelector("input");
-
-const greeting = document.querySelector(".js-greeting");
+const form = document.querySelector(".form"),
+    greeting = document.querySelector(".greeting");
 
 const SHOWING_CLASS = "showing";
-const USER = "chocobe";
+
+const KEY = "currentUser";
 
 function init() {
-    console.log(input);
-    loadUser();
-}
-init();
+    const currentUser = localStorage.getItem(KEY);
 
-function loadUser() {
-    const currentUser = localStorage.getItem(USER);
-    
-    if(currentUser === null) {
-        input.classList.add(SHOWING_CLASS);
-        greeting.classList.remove(SHOWING_CLASS);
+    if(currentUser != null) {
+        form.classList.remove(SHOWING_CLASS);
+        greeting.classList.add(SHOWING_CLASS);
+        
+        greeting.innerText = `Hello ${currentUser}`;
 
     } else {
-        input.classList.remove(SHOWING_CLASS);
-        greeting.classList.add(SHOWING_CLASS);
-        greeting.innerText = `Hello ${USER}`;        
+        form.classList.add(SHOWING_CLASS);
+        greeting.classList.remove(SHOWING_CLASS);
     }
 }
+init();
