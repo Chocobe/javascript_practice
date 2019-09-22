@@ -1,0 +1,22 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wrap {
+    width: 900px;
+    height: 100px;
+    background: peru;
+
+    text-align: center;
+}
+
+.js-nonClick {
+    color: black;
+    transition: color 0.5s ease-in-out;
+}
+
+.js-click {
+    color: white;
+    transition: color 0.5s ease-in-out;
+}
