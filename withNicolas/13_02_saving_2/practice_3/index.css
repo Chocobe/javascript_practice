@@ -1,0 +1,17 @@
+body {
+    width: 300px;
+    height: 300px;
+
+    margin: 0 auto;
+
+    background: peru;
+}
+
+.form,
+.greeting {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
