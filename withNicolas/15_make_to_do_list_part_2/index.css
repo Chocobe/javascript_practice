@@ -1,0 +1,14 @@
+body {
+    width: 200px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.form,
+.greeting {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
