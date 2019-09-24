@@ -30,7 +30,6 @@ function paintGreeting(text) {
 function askForName() {
     greeting.classList.remove(SHOW_CN);
     form.classList.add(SHOW_CN);
-<<<<<<< HEAD
     form.addEventListener("submit", handleInput);
 }
 
@@ -39,17 +38,6 @@ function handleInput(event) {
     const inputValue = input.value;
     paintGreeting(inputValue);
     saveUser(inputValue);
-=======
-    form.addEventListener("submit", handleInputUser);
-}
-
-function handleInputUser(event) {
-    event.preventDefault();
-    const inputValue = input.value;
-    saveUser(inputValue);
-    paintGreeting(inputValue);
-    input.value = "";
->>>>>>> origin/master
 }
 
 function saveUser(text) {
