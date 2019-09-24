@@ -1,7 +1,13 @@
 body {
     width: 200px;
+<<<<<<< HEAD
     margin: 0 auto;
     background: peru;
+=======
+    height: 400px;
+    margin: 0 auto;
+    background: gray;
+>>>>>>> origin/master
 }
 
 .form,

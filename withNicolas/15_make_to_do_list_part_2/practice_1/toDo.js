@@ -34,6 +34,7 @@ function paintToDo(text) {
     li.appendChild(span);
 
     toDoList.appendChild(li);
+<<<<<<< HEAD
 }
 
 function handleToDoInput(event) {
