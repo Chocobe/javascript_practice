@@ -1,0 +1,15 @@
+body {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    background: darkolivegreen;
+}
+
+.form,
+.greeting {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
