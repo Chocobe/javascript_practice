@@ -1,0 +1,31 @@
+.greetingForm,
+.greetingTitle {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+button {
+    margin-right: 20px;
+}
+
+#bgAnimation {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+
+    } to {
+        opacity: 1;
+    }
+}
