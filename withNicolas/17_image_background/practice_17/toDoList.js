@@ -7,10 +7,7 @@ let js_toDoList = [ /* { id: __ , text: __ } */ ];
 
 function init() {
     loadToDoList();
-<<<<<<< HEAD
     toDoForm.addEventListener("submit", handleToDoInput);
-=======
->>>>>>> origin/master
 }
 init();
 
@@ -19,21 +16,12 @@ function loadToDoList() {
 
     if(loadedToDoList !== null) {
         const parsedToDoList = JSON.parse(loadedToDoList);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
         parsedToDoList.forEach(function(toDo) {
             const currentToDo = createToDo(toDo.text);
             addToDo(currentToDo);
             paintToDo(currentToDo);
         });
     }
-<<<<<<< HEAD
-=======
-
-    toDoForm.addEventListener("submit", handleToDoInput);
->>>>>>> origin/master
 }
 
 function handleToDoInput(event) {
@@ -65,11 +53,7 @@ function paintToDo(toDo) {
         button = document.createElement("button"),
         span = document.createElement("span");
 
-<<<<<<< HEAD
     button.innerText = "🐒";
-=======
-    button.innerText = "☁️";
->>>>>>> origin/master
     button.addEventListener("click", handleDelete);
 
     span.innerText = toDo.text;
@@ -77,11 +61,7 @@ function paintToDo(toDo) {
     li.id = toDo.id;
     li.appendChild(button);
     li.appendChild(span);
-<<<<<<< HEAD
     
-=======
-
->>>>>>> origin/master
     toDoList.appendChild(li);
 }
 
@@ -92,10 +72,6 @@ function handleDelete(event) {
     const fixedToDoList = js_toDoList.filter(function(toDo) {
         return toDo.id !== parseInt(li.id);
     });
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
     js_toDoList = fixedToDoList;
     localStorage.setItem(TODO_LS, JSON.stringify(js_toDoList));
     toDoList.removeChild(li);

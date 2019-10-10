@@ -2,13 +2,8 @@ const greetingForm = document.querySelector(".js-greetingForm"),
     greetingInput = greetingForm.querySelector("input"),
     greetingTitle = document.querySelector(".js-greetingTitle");
 
-<<<<<<< HEAD
 const USER_LS = "currentUser";
 const SHOW_CN = "showing";
-=======
-const SHOW_CN = "showing";
-const USER_LS = "currentUser";
->>>>>>> origin/master
 
 function init() {
     loadUser();
@@ -42,11 +37,7 @@ function handleGreetingInput(event) {
     event.preventDefault();
     const inputValue = greetingInput.value;
     greetingInput.value = "";
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/master
     localStorage.setItem(USER_LS, inputValue);
     paintGreeting(inputValue);
 }
