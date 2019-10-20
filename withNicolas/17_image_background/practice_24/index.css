@@ -1,0 +1,59 @@
+html {
+    background-color: darkslategray;
+}
+
+#contentWrap {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.greetingForm,
+.greetingTitle {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+.js-clock h1 {
+    width: 140px;
+}
+
+.js-greetingTitle {
+    width: 300px;
+    background-color: white;
+}
+
+.js-clock h1,
+.js-toDoList span {
+    background-color: white;
+}
+
+.js-toDoList button {
+    margin: 5px 20px 5px 0;
+}
+
+.js-toDoList span {
+    padding: 0 10px 0 10px;
+}
+
+#bgAnimation {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+
+    } to {
+        opacity: 1;
+    }
+}
