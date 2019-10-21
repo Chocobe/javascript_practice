@@ -36,7 +36,8 @@ body {
 }
 
 .checkToDo {
-    text-decoration: line-through;
+    text-decoration: line-through red;
+    background-color: rgb(112, 233, 112);
 }
 
 li {
@@ -44,9 +45,10 @@ li {
 }
 
 span {
-    background: white;
+    background: rgb(123, 214, 250);
     margin-right: 15px;
     padding: 0 5px 0 5px;
+    font-weight: bolder;
 }
 
 button {
