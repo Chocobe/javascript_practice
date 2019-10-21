@@ -1,3 +1,7 @@
+body {
+    background: rgb(11, 61, 14);
+}
+
 #contentWrap {
     width: 50%;
     margin: 0 auto;
@@ -33,6 +37,10 @@
 
 .checkToDo {
     text-decoration: line-through;
+}
+
+li {
+    margin-bottom: 15px;
 }
 
 span {

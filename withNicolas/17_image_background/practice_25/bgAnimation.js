@@ -9,7 +9,7 @@ function init() {
     setInterval(function() {
         deleteAnimation();
         createAnimation();
-    }, 10000);
+    }, 60000);
 }
 init();
 

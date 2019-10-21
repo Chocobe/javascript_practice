@@ -64,10 +64,10 @@ function paintToDo(toDo) {
     span.innerText = toDo.text;
 
     li.id = toDo.id;
-    li.appendChild(span);
     li.appendChild(deleteButton);
     li.appendChild(checkButton);
-
+    li.appendChild(span);
+    
     toDoList.appendChild(li);
 }
 
