@@ -1,0 +1,64 @@
+body {
+    /* background-color:#003333; */
+    font-weight: bolder;
+}
+
+#bgAnimation {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+
+    } to {
+        opacity: 1;
+    }
+}
+
+#contentWrap {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contentWrap .basicFont {
+    color: #2AE3E3;
+    background-color: black;
+}
+
+.greetingForm,
+.greetingTitle {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+input {
+    width: 500PX;
+}
+
+.checkItem {
+    text-decoration: line-through;
+    color: red;
+}
+
+.js-toDoList li {
+    background-color: black;
+    margin: 10px 0 10px 0;
+}
+
+.js-toDoList span {
+    margin: 0 10px 0 10px;
+}
+
+ul {
+    list-style-type: decimal;
+}
