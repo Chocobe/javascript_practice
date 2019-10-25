@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#contentWrap {
+    width: 35%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#bgAnimation {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+
+    } to {
+        opacity: 1;
+    }
+}
+
+.greetingTitle,
+.greetingForm {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+.clockAnimation {
+    animation: fadeOff 1s ease;
+}
+
+@keyframes fadeOff {
+    from {
+        background-color: gray;
+
+    } to {
+        background-color: white;
+    }
+}
+
+li {
+    font-weight: bolder;
+    color: rgb(44, 153, 30);
+    margin: 0 0 20px 20px;
+    list-style-type: none;
+}
+
+.preSymbol {
+    margin-right: 10px;
+}
+
+span {
+    margin-left: 20px;
+}
+
+.checker {
+    color: gray;
+    text-decoration-line: line-through;
+    text-decoration-color: red;
+}
+
+button {
+    margin-right: 5px;
+}
