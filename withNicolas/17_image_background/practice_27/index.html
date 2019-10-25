@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>My To Do List</title>
+
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div id="container">
+            <h1>🐣 my To Do List 🐣<span class="js-clock">no data</span></h1>
+
+            <hr/>
+            
+            <form class="js-greetingForm greetingForm">
+                <input type="text" placeholder="What is your name?">
+            </form>
+            <h2 class="js-greetingTitle greetingTitle">
+                🎈 Hello<span class="js-greetingUser">no User</span> !!<br/>🎈 What will you do today?
+            </h2>
+
+            <form class="js-toDoForm">
+                <input type="text" placeholder="What to do today?">
+            </form>
+            <ul class="js-toDoList"></ul>
+        </div>
+        
+        <script src="clock.js"></script>
+        <script src="greeting.js"></script>
+        <script src="toDoList.js"></script>
+        <script src="bgAnimation.js"></script>
+    </body>
+</html>

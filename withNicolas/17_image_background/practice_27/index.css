@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(2, 54, 34);
+}
+
+#container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.greetingForm,
+.greetingTitle {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+.js-greetingUser {
+    font-weight: bolder;
+    color: magenta;
+}
+
+input {
+    width: 100%;
+}
+
+.checkToDo {
+    color: rgb(59, 80, 240);
+    text-decoration: line-through red;
+}
+
+#bgAnimation {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    animation: fadeIn 5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+
+    } to {
+        opacity: 1;
+    }
+}
+
+h1, h2, li {
+    background-color: rgb(175, 221, 235);
+}
+
+ul {
+    list-style: decimal;
+}
+
+li {
+    margin: 10px 0 10px 0;
+    font-weight: bolder;
+    color: rgb(147, 3, 3);
+}
+
+span {
+    margin-left: 20px;
+}
