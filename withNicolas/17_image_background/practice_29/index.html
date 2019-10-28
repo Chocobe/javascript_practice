@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>To Do List</title>
+
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div class="bgImage"></div>
+        
+        <div class="contentWrap">
+            <h1>
+                📋 To Do List
+                <span class="js-clock">(no data)</span>
+            </h1>
+
+            <hr/>
+            
+            <form class="js-greetingForm greetingForm">
+                <h3>😎 Hello 😎</h3>
+                <label for="js-greetingInput">Name : </label>
+                <input type="text" class="js-greetingInput" placeholder="What is your name?">
+            </form>
+            
+            <h2 class="js-greetingTitle greetingTitle">
+                <span class="greeting">no User</span>
+                <button class="js-greetingDelete">유저변경</button>
+            </h2>
+
+            <hr/>
+
+            <h2>What is your schedule today?</h2>
+            <form class="js-toDoForm">
+                <input type="text" placeholder="What to do today?">                
+            </form>
+
+            <hr/>
+            
+            <ul class="js-toDoList"></ul>
+
+            <script src="clock.js"></script>
+            <script src="greeting.js"></script>
+            <script src="toDoList.js"></script>
+        </div>
+    </body>
+</html>
